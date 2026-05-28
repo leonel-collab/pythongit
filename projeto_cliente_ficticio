@@ -1,0 +1,31 @@
+select 
+    c.id as id_cliente, 
+    c.nome as nome_cliente,
+    v.valor_total, 
+    c.COMPLEMENTO,
+     c.rua,
+    c.numero,
+    UF.nome as nome_estados, 
+    cid.nome as nome_cidade,
+   
+case
+    when c.complemento is null then ''
+    else c.complemento
+    End as 'tratamento por case',
+    
+concat(c.rua, ' - ',c.numero) as endereco
+
+   from cliente as c
+   inner join cidades as cid
+   on c.cidades_id = cid.id
+   inner join estados as UF
+   on cid.ESTADOS_ID = UF.id
+   left join vendas as V
+   on c.id = v.id_cliente;
+
+
+
+
+
+
+
