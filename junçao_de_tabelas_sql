@@ -1,0 +1,7 @@
+select cidades.nome,cliente.nome, cliente.bairro, cliente.rua, vendas.valor_total
+from cliente
+inner join cidades
+on cliente.CIDADES_ID = cidades.id
+inner join vendas
+on vendas.id_cliente= cliente.id
+group by cidades.nome, cliente.nome, cliente.bairro, cliente.rua, vendas.valor_total;
