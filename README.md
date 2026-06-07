@@ -17,8 +17,7 @@ Relacionar dados de clientes, cidades e vendas para gerar um relatório consolid
 2. **SELECT específico** - Retorna apenas: nome da cidade, nome do cliente, bairro, rua e valor_total
 ##3. **GROUP BY** - Agrupa os resultados por cidade, cliente, bairro, rua e valor_total.
 
-<img width="960" height="540" alt="Captura de tela 2026-06-05 183349" src="https://github.com/user-attachments/assets/5848767a-74d0-4c92-b918-e9c1201b6c96" />
-### **Código:**
+<img width="960" height="540" alt="Captura de tela 2026-06-05 183349" src="https://github.com/user-attachments/assets/5848767a-74d0-4c92-b918-e9c1201b6c96" /> **Código:**
 ```sql
 SELECT 
     cidades.nome,
